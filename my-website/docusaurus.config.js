@@ -18,7 +18,8 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'randomJoe211', // Usually your GitHub org/user name.
-  projectName: 'new-doc', // Usually your repo name.
+  projectName: 'randomjoe211.github.io', // Usually your repo name.
+  trailingSlash: true,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -39,7 +40,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/randomJoe211/new-doc/my-website/',
+            'https://github.com/randomJoe211/randomjoe211.github.io/my-website/',
         },
         blog: false,
         pages: false,
