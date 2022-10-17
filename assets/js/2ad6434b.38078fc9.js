@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[729],{1274:t=>{t.exports=JSON.parse('{"title":"Introduction","slug":"/category/introduction","permalink":"/category/introduction","navigation":{"previous":{"title":"NebulaGraph Database","permalink":"/"},"next":{"title":"An introduction to graphs","permalink":"/introduction/graph"}}}')}}]);
