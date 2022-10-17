@@ -11,7 +11,7 @@ const config = {
   url: 'https://randomjoe211.github.io/',
   deploymentBranch: 'gh-pages', // The git branch where you deploy the static files.
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
@@ -20,7 +20,6 @@ const config = {
   organizationName: 'randomJoe211', // Usually your GitHub org/user name.
   projectName: 'randomjoe211.github.io', // Usually your repo name.
   trailingSlash: true,
-  onBrokenLinks: 'log',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -94,7 +93,7 @@ const config = {
       announcementBar: {
         id: 'annoucement',
         content: 'This is a test website for NebulaGraph docs.',
-        backgroundColor: 'Yellow', // Default: #fff
+        backgroundColor: '#cccccc', // Default: #fff
         textColor: '#000', // Default: #000
         isCloseable: true, // Default: true
       },

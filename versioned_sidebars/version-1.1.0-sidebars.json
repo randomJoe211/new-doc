@@ -1,0 +1,34 @@
+{
+  "docs": [
+    "intro",
+    {
+      "type": "category",
+      "label": "Introduction",
+      "link": {
+        "type": "generated-index"
+      },
+      "items": [
+        "introduction/graph",
+        "introduction/graph-database",
+        "introduction/related-tech",
+        "introduction/what-is-nebula-graph",
+        {
+          "type": "category",
+          "label": "NebulaGraph Architecture",
+          "link": {
+            "type": "generated-index"
+          },
+          "items": [
+            "introduction/nebula-graph-architecture/architecture-overview",
+            "introduction/nebula-graph-architecture/meta-service",
+            "introduction/nebula-graph-architecture/graph-service",
+            "introduction/nebula-graph-architecture/storage-service"
+          ]
+        },
+        "introduction/data-model",
+        "introduction/path",
+        "introduction/vid"
+      ]
+    }
+  ]
+}
