@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'NebulaGraph Documentation',
   tagline: 'The fastest open source graph database',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://randomjoe211.github.io/',
   deploymentBranch: 'gh-pages', // The git branch where you deploy the static files.
   baseUrl: '/',
   onBrokenLinks: 'throw',
