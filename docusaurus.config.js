@@ -143,6 +143,7 @@ const config = {
           {
             type: 'docsVersionDropdown', // Doc version selector
             position: 'right',
+            docsPluginId: 'default',
           },
           {
             type: 'localeDropdown', // Language selector
