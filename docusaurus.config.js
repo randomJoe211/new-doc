@@ -39,8 +39,9 @@ const config = {
           routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/randomJoe211/randomjoe211.github.io/',
+          editUrl: ({locale, versionDocsDirPath, docPath}) => {
+            return `https://github.com/randomJoe211/randomjoe211.github.io/edit/main/${versionDocsDirPath}/${docPath}`;
+          },
         },
         blog: false,
         pages: false,
@@ -58,6 +59,9 @@ const config = {
         path: 'cloud',
         routeBasePath: 'cloud',
         sidebarPath: require.resolve('./sidebarsCloud.js'),
+        editUrl: ({locale, versionDocsDirPath, docPath}) => {
+          return `https://github.com/randomJoe211/randomjoe211.github.io/edit/main/${versionDocsDirPath}/${docPath}`;
+        },
         // ... other options
       },
     ],
