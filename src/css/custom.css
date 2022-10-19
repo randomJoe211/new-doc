@@ -28,3 +28,37 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+.single_choice_box{
+  border-radius:1em;
+  width: 1em;
+  height: 1em;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  border: 1px solid #2c2c2c;
+  margin-right: 1em;
+}
+
+.multiple_choice_box{
+  width: 1em;
+  height: 1em;
+  background: rgb(255, 255, 255);
+  display: inline-block;
+  border: 1px solid #2c2c2c;
+  margin-right: 1em;
+}
+
+.answer_item{
+  list-style: none;
+}
+
+.answer_item:hover .single_choice_box {
+  background: #2e8555;
+  border: none;
+}
+
+.answer_item:hover .multiple_choice_box {
+  background: #2e8555;
+  border: none;
+}
