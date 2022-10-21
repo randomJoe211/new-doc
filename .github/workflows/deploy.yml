@@ -44,6 +44,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: result
-          # The output filename can be specified with --output option
           path: pdf/NebulaGraph.pdf
           if-no-files-found: error
