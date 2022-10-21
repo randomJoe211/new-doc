@@ -38,7 +38,7 @@ jobs:
           yes "" | sudo ./install.sh
 
       - name: Build PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/ -o ./pdf/NebulaGraph.pdf
+        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/ -o ./pdf/NebulaGraph.pdf --include-index
 
       - name: Upload results
         uses: actions/upload-artifact@v3
