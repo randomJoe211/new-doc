@@ -45,6 +45,6 @@ jobs:
       - name: Upload results
         uses: actions/upload-artifact@v3
         with:
-          name: NebulaGraphDocummen
+          name: NebulaGraphDocsInPDF
           path: pdf/
           if-no-files-found: warn
