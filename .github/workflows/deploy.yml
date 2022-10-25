@@ -37,12 +37,14 @@ jobs:
           cd prince-14.2-linux-generic-x86_64
           yes "" | sudo ./install.sh
 
-      - name: Build PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/ -o ./pdf/NebulaGraph.pdf --include-index
+      - name: Build Database PDF
+        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/ -o ./pdf/NebulaGraphDatabase.pdf --include-index
+      - name: Build Cloud PDF
+        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud.pdf --include-index
 
       - name: Upload results
         uses: actions/upload-artifact@v3
         with:
-          name: result
-          path: pdf/NebulaGraph.pdf
-          if-no-files-found: error
+          name: NebulaGraphDocummen
+          path: pdf/
+          if-no-files-found: warn
