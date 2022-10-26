@@ -18,6 +18,7 @@ async function addPageNumbers() {
     });
   }
 
+  
   writeFileSync("./pdf/NebulaGraphDocsInAll.pdf", await document.save());
 }
 
