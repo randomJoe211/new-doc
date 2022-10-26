@@ -42,9 +42,9 @@ jobs:
       - name: Build Cloud PDF
         run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud.pdf --include-index
       - name: Merge PDFs
-        run: node ./src/components/PDFMerger.js & ./src/components/addPageNumbers.js
-      # - name: Add page numbers to PDFs
-      # - run: node 
+        run: node ./src/components/PDFMerger.js
+      - name: Add page numbers to PDFs
+        run: node ./src/components/addPageNumbers.js
 
       - name: Upload results
         uses: actions/upload-artifact@v3
