@@ -44,7 +44,7 @@ jobs:
       - name: Merge PDFs
         run: node ./src/components/PDFMerger.js
       - name: Add page numbers to PDFs
-      - run: node ./src/components/addPageNumbers.js
+        run: node ./src/components/addPageNumbers.js
 
       - name: Upload results
         uses: actions/upload-artifact@v3
