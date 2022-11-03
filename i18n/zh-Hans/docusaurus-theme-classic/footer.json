@@ -1,0 +1,54 @@
+{
+  "link.title.Learning": {
+    "message": "学习",
+    "description": "The title of the footer links column with title=Learning in the footer"
+  },
+  "link.title.Community": {
+    "message": "社区",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "更多",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.NebulaGraph Database": {
+    "message": "NebulaGraph 内核文档",
+    "description": "The label of footer link with label=NebulaGraph Database linking to /docs/intro"
+  },
+  "link.item.label.NebulaGraph Cloud": {
+    "message": "NebulaGraph 云文档",
+    "description": "The label of footer link with label=NebulaGraph Cloud linking to /docs/intro"
+  },
+  "link.item.label.Training Center": {
+    "message": "培训中心",
+    "description": "The label of footer link with label=Training Center linking to /docs/intro"
+  },
+  "link.item.label.Stack Overflow": {
+    "message": "Stack Overflow",
+    "description": "The label of footer link with label=Stack Overflow linking to https://app.slack.com/client/TJB3N2BPD/CJNFUM7AR"
+  },
+  "link.item.label.GitHub Discussions": {
+    "message": "GitHub Discussions",
+    "description": "The label of footer link with label=GitHub Discussions linking to https://github.com/vesoft-inc/nebula/discussions"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "The label of footer link with label=Twitter linking to https://twitter.com/NebulaGraph"
+  },
+  "link.item.label.Download Center": {
+    "message": "下载中心",
+    "description": "The label of footer link with label=Download Center linking to https://nebula-graph.io/download"
+  },
+  "link.item.label.Blog": {
+    "message": "博客",
+    "description": "The label of footer link with label=Blog linking to https://nebula-graph.io/posts"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/vesoft-inc/nebula"
+  },
+  "copyright": {
+    "message": "Copyright © 2022 vesoft inc. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}
