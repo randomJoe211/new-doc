@@ -1,0 +1,10 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.cloud.category.NebulaGraph on AWS": {
+    "message": "NebulaGraph on AWS",
+    "description": "The label for category NebulaGraph on AWS in sidebar cloud"
+  }
+}
