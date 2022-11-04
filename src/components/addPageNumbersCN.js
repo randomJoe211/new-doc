@@ -19,7 +19,7 @@ async function addPageNumbers() {
   }
 
   
-  writeFileSync("./pdf/NebulaGraphDocsInAll.pdf", await document.save());
+  writeFileSync("./pdf/NebulaGraphDocsInAll_cn.pdf", await document.save());
 }
 
 addPageNumbers().catch((err) => console.log(err));

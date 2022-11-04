@@ -37,6 +37,9 @@ jobs:
           cd prince-14.2-linux-generic-x86_64
           yes "" | sudo ./install.sh
 
+      - name: Install CN fonts
+        run: chmod +x ./fonts.sh | sudo ./fonts.sh
+
       - name: Build Database EN PDF
         run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/ -o ./pdf/NebulaGraphDatabase_en.pdf --include-index
       - name: Build Database CN PDF
