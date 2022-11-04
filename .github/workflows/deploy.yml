@@ -37,14 +37,22 @@ jobs:
           cd prince-14.2-linux-generic-x86_64
           yes "" | sudo ./install.sh
 
-      - name: Build Database PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/ -o ./pdf/NebulaGraphDatabase.pdf --include-index
-      - name: Build Cloud PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud.pdf --include-index
-      - name: Merge PDFs
-        run: node ./src/components/PDFMerger.js
-      - name: Add page numbers to PDFs
-        run: node ./src/components/addPageNumbers.js
+      - name: Build Database EN PDF
+        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/ -o ./pdf/NebulaGraphDatabase_en.pdf --include-index
+      - name: Build Database CN PDF
+        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/zh-Hans/ -o ./pdf/NebulaGraphDatabase_cn.pdf --include-index
+      - name: Build Cloud EN PDF
+        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud_en.pdf --include-index
+      - name: Build Cloud CN PDF
+        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/zh-Hans/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud_cn.pdf --include-index
+      - name: Merge EN PDFs
+        run: node ./src/components/PDFMergerEN.js
+      - name: Merge CN PDFs
+        run: node ./src/components/PDFMergerCN.js
+      - name: Add page numbers to EN PDFs
+        run: node ./src/components/addPageNumbersEN.js
+      - name: Add page numbers to CN PDFs
+        run: node ./src/components/addPageNumbersCN.js
 
       - name: Upload results
         uses: actions/upload-artifact@v3

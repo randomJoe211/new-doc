@@ -2,7 +2,7 @@ const { PDFDocument, StandardFonts } = require("pdf-lib");
 const { writeFileSync, readFileSync } = require("fs");
 
 async function addPageNumbers() {
-  const document = await PDFDocument.load(readFileSync("./pdf/NebulaGraphDocsInAll.pdf"));
+  const document = await PDFDocument.load(readFileSync("./pdf/NebulaGraphDocsInAll_en.pdf"));
 
   const courierBoldFont = await document.embedFont(StandardFonts.Courier);
   const pageIndices = document.getPageIndices();
