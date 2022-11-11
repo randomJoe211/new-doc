@@ -95,7 +95,7 @@ const config = {
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
         docsRouteBasePath: '/',
-        docsDir: ['docs', 'cloud'],
+        docsDir: ['docs', 'cloud', 'training'],
         highlightSearchTermsOnTargetPage: true,
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
