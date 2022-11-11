@@ -7,10 +7,6 @@
     "message": "产品文档",
     "description": "Navbar item with label Docs"
   },
-  "item.label.Learning": {
-    "message": "学习中心",
-    "description": "Navbar item with label Learning"
-  },
   "item.label.Certifications": {
     "message": "认证考试",
     "description": "Navbar item with label Certifications"
@@ -20,11 +16,15 @@
     "description": "Navbar item with label GitHub"
   },
   "item.label.Database": {
-    "message": "内核",
+    "message": "NebulaGraph 内核",
     "description": "Navbar item with label Database"
   },
   "item.label.Cloud": {
-    "message": "云",
+    "message": "NebulaGraph 云",
     "description": "Navbar item with label Cloud"
+  },
+  "item.label.Training": {
+    "message": "培训中心",
+    "description": "Navbar item with label Training"
   }
 }

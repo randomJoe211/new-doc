@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.training.category.graph-basics": {
+    "message": "图技术基础",
+    "description": "The label for category graph-basics in sidebar training"
+  },
+  "sidebar.cloud.category.图技术基础": {
+    "message": "图技术基础",
+    "description": "The label for category 图技术基础 in sidebar cloud"
+  }
+}
