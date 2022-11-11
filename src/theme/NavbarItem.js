@@ -8,7 +8,7 @@ export default function NavbarItem(props) {
 
   if (type === 'docsVersionDropdown'){
     const paths = pathname.split('/')
-    if(paths[1]==='cloud'||paths[2]==='cloud') {
+    if(paths[1]==='cloud'||paths[1]==='training'||paths[2]==='cloud'||paths[2]==='training') {
     return null
     }
   }

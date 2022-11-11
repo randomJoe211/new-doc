@@ -71,6 +71,19 @@ const config = {
         // ... other options
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'training',
+        path: 'training',
+        routeBasePath: 'training',
+        sidebarPath: require.resolve('./sidebarsTraining.js'),
+        editUrl: ({locale, versionDocsDirPath, docPath}) => {
+          return `https://github.com/randomJoe211/randomjoe211.github.io/edit/main/${versionDocsDirPath}/${docPath}`;
+        },
+        // ... other options
+      },
+    ]
   ],
   themes: [
     // ... Your other themes.
@@ -140,9 +153,9 @@ const config = {
             ],
           },
           {
-            href: 'https://academic.nebula-graph.io/',
-            label: 'Learning',
-            position: 'left',
+            to: '/training/',
+            label: 'Training',
+            activeBaseRegex: `/training/`,
           },
           {
             href: 'https://academic.nebula-graph.io/',
