@@ -42,7 +42,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars/sidebars.js'),
-          routeBasePath: '/',
+          path: 'docs',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: ({locale, versionDocsDirPath, docPath}) => {
@@ -50,7 +50,11 @@ const config = {
           },
         },
         blog: false,
-        pages: false,
+        pages: {
+          path: 'src/pages',
+          routeBasePath: '/',
+          include: ['**/*.md'],
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
