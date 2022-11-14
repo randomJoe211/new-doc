@@ -13,10 +13,10 @@
       type: 'category',
       label: '图技术基础',
       link: {
-        type: 'generated-index',
+        type: 'doc',
+        id: 'graph-basics/overview'
       },
       items: [
-        'graph-basics/overview',
         'graph-basics/basic-knowledge-graph',
         'graph-basics/basic-knowledge-graph-structure',
         'graph-basics/basic-knowledge-graph-property',
