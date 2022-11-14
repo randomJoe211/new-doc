@@ -41,7 +41,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars/sidebars.js'),
           routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -64,7 +64,7 @@ const config = {
         id: 'cloud',
         path: 'cloud',
         routeBasePath: 'cloud',
-        sidebarPath: require.resolve('./sidebarsCloud.js'),
+        sidebarPath: require.resolve('./sidebars/sidebarsCloud.js'),
         editUrl: ({locale, versionDocsDirPath, docPath}) => {
           return `https://github.com/randomJoe211/randomjoe211.github.io/edit/main/${versionDocsDirPath}/${docPath}`;
         },
@@ -77,7 +77,7 @@ const config = {
         id: 'training',
         path: 'training',
         routeBasePath: 'training',
-        sidebarPath: require.resolve('./sidebarsTraining.js'),
+        sidebarPath: require.resolve('./sidebars/sidebarsTraining.js'),
         editUrl: ({locale, versionDocsDirPath, docPath}) => {
           return `https://github.com/randomJoe211/randomjoe211.github.io/edit/main/${versionDocsDirPath}/${docPath}`;
         },
