@@ -41,9 +41,9 @@ jobs:
         run: chmod +x ./fonts.sh | sudo ./fonts.sh
 
       - name: Build Database EN PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/ -o ./pdf/NebulaGraphDatabase_en.pdf --include-index
+        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/docs -o ./pdf/NebulaGraphDatabase_en.pdf --include-index
       - name: Build Database CN PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/zh-Hans/ -o ./pdf/NebulaGraphDatabase_cn.pdf --include-index
+        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/zh-Hans/docs -o ./pdf/NebulaGraphDatabase_cn.pdf --include-index
       - name: Build Cloud EN PDF
         run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud_en.pdf --include-index
       - name: Build Cloud CN PDF
