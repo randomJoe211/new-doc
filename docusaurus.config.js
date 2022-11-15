@@ -162,7 +162,7 @@ const config = {
             activeBaseRegex: `/training/`,
           },
           {
-            href: 'https://academic.nebula-graph.io/',
+            to: 'https://academic.nebula-graph.io/',
             label: 'Certifications',
             position: 'left',
           },
@@ -230,11 +230,11 @@ const config = {
             items: [
               {
                 label: 'Download Center',
-                href: 'https://nebula-graph.io/download',
+                to: 'https://nebula-graph.io/download',
               },
               {
                 label: 'Blog',
-                href: 'https://nebula-graph.io/posts',
+                to: 'https://nebula-graph.io/posts',
               },
               {
                 label: 'GitHub',
