@@ -1,65 +1,65 @@
-name: Deploy to GitHub Pages
+# name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: npm
+# jobs:
+#   deploy:
+#     name: Deploy to GitHub Pages
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
+#           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
-      - name: Build website
-        run: npm run build
+#       - name: Install dependencies
+#         run: npm ci
+#       - name: Build website
+#         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Build output to publish to the `gh-pages` branch:
-          publish_dir: ./build
-          user_name: github-actions[bot]
-          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+#       - name: Deploy to GitHub Pages
+#         uses: peaceiris/actions-gh-pages@v3
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           # Build output to publish to the `gh-pages` branch:
+#           publish_dir: ./build
+#           user_name: github-actions[bot]
+#           user_email: 41898282+github-actions[bot]@users.noreply.github.com
 
-      - name: Install Prince
-        run: |
-          curl https://www.princexml.com/download/prince-14.2-linux-generic-x86_64.tar.gz -O
-          tar zxf prince-14.2-linux-generic-x86_64.tar.gz
-          cd prince-14.2-linux-generic-x86_64
-          yes "" | sudo ./install.sh
+#       - name: Install Prince
+#         run: |
+#           curl https://www.princexml.com/download/prince-14.2-linux-generic-x86_64.tar.gz -O
+#           tar zxf prince-14.2-linux-generic-x86_64.tar.gz
+#           cd prince-14.2-linux-generic-x86_64
+#           yes "" | sudo ./install.sh
 
-      - name: Install CN fonts
-        run: chmod +x ./fonts.sh | sudo ./fonts.sh
+#       - name: Install CN fonts
+#         run: chmod +x ./fonts.sh | sudo ./fonts.sh
 
-      - name: Build Database EN PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/docs -o ./pdf/NebulaGraphDatabase_en.pdf --include-index
-      - name: Build Database CN PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/zh-Hans/docs -o ./pdf/NebulaGraphDatabase_cn.pdf --include-index
-      - name: Build Cloud EN PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud_en.pdf --include-index
-      - name: Build Cloud CN PDF
-        run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/zh-Hans/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud_cn.pdf --include-index
-      - name: Merge EN PDFs
-        run: node ./src/components/PDFMergerEN.js
-      - name: Merge CN PDFs
-        run: node ./src/components/PDFMergerCN.js
-      - name: Add page numbers to EN PDFs
-        run: node ./src/components/addPageNumbersEN.js
-      - name: Add page numbers to CN PDFs
-        run: node ./src/components/addPageNumbersCN.js
+#       - name: Build Database EN PDF
+#         run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/docs -o ./pdf/NebulaGraphDatabase_en.pdf --include-index
+#       - name: Build Database CN PDF
+#         run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/zh-Hans/docs -o ./pdf/NebulaGraphDatabase_cn.pdf --include-index
+#       - name: Build Cloud EN PDF
+#         run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud_en.pdf --include-index
+#       - name: Build Cloud CN PDF
+#         run: npx docusaurus-prince-pdf -u https://randomjoe211.github.io/zh-Hans/cloud/what-is-cloud/ -o ./pdf/NebulaGraphCloud_cn.pdf --include-index
+#       - name: Merge EN PDFs
+#         run: node ./src/components/PDFMergerEN.js
+#       - name: Merge CN PDFs
+#         run: node ./src/components/PDFMergerCN.js
+#       - name: Add page numbers to EN PDFs
+#         run: node ./src/components/addPageNumbersEN.js
+#       - name: Add page numbers to CN PDFs
+#         run: node ./src/components/addPageNumbersCN.js
 
-      - name: Upload results
-        uses: actions/upload-artifact@v3
-        with:
-          name: NebulaGraphDocsInPDF
-          path: pdf/*.pdf
-          if-no-files-found: warn
+#       - name: Upload results
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: NebulaGraphDocsInPDF
+#           path: pdf/*.pdf
+#           if-no-files-found: warn

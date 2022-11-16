@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'NebulaGraph Documentation',
+  title: 'NebulaGraph Academy',
   tagline: 'The fastest open source graph database',
-  url: 'https://randomjoe211.github.io/',
+  url: 'https://academic.nebula-graph.io/',
   deploymentBranch: 'gh-pages', // The git branch where you deploy the static files.
   baseUrl: '/',
   onBrokenLinks: 'log',
@@ -17,22 +17,23 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'randomJoe211', // Usually your GitHub org/user name.
-  projectName: 'randomjoe211.github.io', // Usually your repo name.
+  organizationName: 'vesoft-inc', // Usually your GitHub org/user name.
+  projectName: 'academic-website', // Usually your repo name.
   trailingSlash: true,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans". 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'zh-Hans'],
-    localeConfigs: {
-      en: {
-        htmlLang: 'en-GB',
-      },
-      // 如果你不需要覆盖默认值，你可以忽略这个语言（比如 zh-Hans）
-    },
+    defaultLocale: 'zh-Hans',
+    // locales: ['en', 'zh-Hans'],
+    locales: ['zh-Hans'],
+    // localeConfigs: {
+    //   en: {
+    //     htmlLang: 'en-GB',
+    //   },
+    //   // 如果你不需要覆盖默认值，你可以忽略这个语言（比如 zh-Hans）
+    // },
   },
 
   presets: [
@@ -41,18 +42,18 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars/sidebars.js'),
+          id: 'default',
+          sidebarPath: require.resolve('./sidebars/sidebarsTraining'),
           path: 'docs',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: ({locale, versionDocsDirPath, docPath}) => {
-            return `https://github.com/randomJoe211/randomjoe211.github.io/edit/main/${versionDocsDirPath}/${docPath}`;
+            return `https://github.com/vesoft-inc/academic-website/edit/docs/${versionDocsDirPath}/${docPath}`;
           },
         },
         blog: false,
         pages: {
           path: 'src/pages',
-          routeBasePath: '/',
           include: ['**/*.md'],
         },
         theme: {
@@ -61,53 +62,40 @@ const config = {
       }),
     ],
   ],
-  plugins: [
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'cloud',
-        path: 'cloud',
-        routeBasePath: 'cloud',
-        sidebarPath: require.resolve('./sidebars/sidebarsCloud.js'),
-        editUrl: ({locale, versionDocsDirPath, docPath}) => {
-          return `https://github.com/randomJoe211/randomjoe211.github.io/edit/main/${versionDocsDirPath}/${docPath}`;
-        },
-        // ... other options
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'training',
-        path: 'training',
-        routeBasePath: 'training',
-        sidebarPath: require.resolve('./sidebars/sidebarsTraining.js'),
-        editUrl: ({locale, versionDocsDirPath, docPath}) => {
-          return `https://github.com/randomJoe211/randomjoe211.github.io/edit/main/${versionDocsDirPath}/${docPath}`;
-        },
-        // ... other options
-      },
-    ]
-  ],
-  themes: [
-    // ... Your other themes.
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        docsRouteBasePath: '/',
-        docsDir: ['docs', 'cloud', 'training'],
-        highlightSearchTermsOnTargetPage: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        // language: ["en", "zh"],
-        // ```
-      }),
-    ],
-  ],
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-content-docs',
+  //     {
+  //       id: 'training',
+  //       path: 'training',
+  //       routeBasePath: 'training',
+  //       sidebarPath: require.resolve('./sidebars/sidebarsTraining.js'),
+  //       editUrl: ({locale, versionDocsDirPath, docPath}) => {
+  //         return `https://github.com/randomJoe211/randomjoe211.github.io/edit/main/${versionDocsDirPath}/${docPath}`;
+  //       },
+  //       // ... other options
+  //     },
+  //   ]
+  // ],
+  // themes: [
+  //   // ... Your other themes.
+  //   [
+  //     require.resolve("@easyops-cn/docusaurus-search-local"),
+  //     /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+  //     ({
+  //       // ... Your options.
+  //       // `hashed` is recommended as long-term-cache of index file is possible.
+  //       hashed: true,
+  //       docsRouteBasePath: '/training',
+  //       docsDir: ['training'],
+  //       highlightSearchTermsOnTargetPage: true,
+  //       // For Docs using Chinese, The `language` is recommended to set to:
+  //       // ```
+  //       // language: ["en", "zh"],
+  //       // ```
+  //     }),
+  //   ],
+  // ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -119,7 +107,7 @@ const config = {
       },
       announcementBar: {
         id: 'annoucement',
-        content: 'This is a test website for NebulaGraph docs.',
+        content: 'This is a test website for NebulaGraph Academy.',
         backgroundColor: '#cccccc', // Default: #fff
         textColor: '#000', // Default: #000
         isCloseable: true, // Default: true
@@ -138,28 +126,28 @@ const config = {
             position: 'left',
             label: 'Docs',
           },*/
+          // {
+          //   type: 'dropdown',
+          //   label: 'Docs',
+          //   position: 'left',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       docId: 'intro',
+          //       label: 'Database',
+          //     },
+          //     {
+          //       to: '/cloud/what-is-cloud',
+          //       label: 'Cloud',
+          //       //activeBaseRegex: `/cloud/`,
+          //     },
+          //     // ... more items
+          //   ],
+          // },
           {
-            type: 'dropdown',
-            label: 'Docs',
-            position: 'left',
-            items: [
-              {
-                type: 'doc',
-                docId: 'intro',
-                label: 'Database',
-              },
-              {
-                to: '/cloud/what-is-cloud',
-                label: 'Cloud',
-                //activeBaseRegex: `/cloud/`,
-              },
-              // ... more items
-            ],
-          },
-          {
-            to: '/training/',
+            to: '/docs/intro',
             label: 'Training',
-            activeBaseRegex: `/training/`,
+            activeBaseRegex: `/docs/`,
           },
           {
             to: 'https://academic.nebula-graph.io/',
@@ -167,25 +155,25 @@ const config = {
             position: 'left',
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   type: 'docsVersionDropdown', // Doc version selector
+          //   position: 'right',
+          //   docsPluginId: 'default',
+          // },
+          // {
+          //   type: 'localeDropdown', // Language selector
+          //   position: 'right',
+          // },
           {
-            type: 'docsVersionDropdown', // Doc version selector
-            position: 'right',
-            docsPluginId: 'default',
-          },
-          {
-            type: 'localeDropdown', // Language selector
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/vesoft-inc/nebula-docs', // A link to the GitHub repo
+            href: 'https://github.com/vesoft-inc/academic-website', // A link to the GitHub repo
             label: 'GitHub',
             className: 'header-github-link',
             position: 'right',
           },
-          {
-            type: 'search',
-            position: 'right',
-          },
+          // {
+          //   type: 'search',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {
