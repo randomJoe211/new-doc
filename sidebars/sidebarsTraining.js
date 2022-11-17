@@ -47,6 +47,7 @@
       ],
     },
     'practice-cloud-deployment',
+    'practice-nebulagraph-app',
   ],
   
   };

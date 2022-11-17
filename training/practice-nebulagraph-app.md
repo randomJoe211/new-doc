@@ -1,3 +1,6 @@
+---
+title: 实践课程（二）
+---
 # 基于 NebulaGraph 的智能问答机器人应用
 
 <iframe src="//player.bilibili.com/player.html?aid=647525312&bvid=BV1he4y1W76N&cid=891346458&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="720px" height="480px"> </iframe>
