@@ -12,16 +12,41 @@
     {
       type: 'category',
       label: '图技术基础',
-      link: {
-        type: 'doc',
-        id: 'graph-basics/overview'
+      link:  {
+        type: 'generated-index',
       },
       items: [
-        'graph-basics/basic-knowledge-graph',
-        'graph-basics/basic-knowledge-graph-structure',
-        'graph-basics/basic-knowledge-graph-property',
+        {
+          type: 'category',
+          label: '图基础知识',
+          link: {
+            type: 'doc',
+            id: 'graph-basics/basic-knowledge/overview'
+          },
+          items: [
+            'graph-basics/basic-knowledge/basic-knowledge-graph',
+            'graph-basics/basic-knowledge/basic-knowledge-graph-structure',
+            'graph-basics/basic-knowledge/basic-knowledge-graph-property',
+          ],
+        },
+        {
+          type: 'category',
+          label: '磨人小概念',
+          link: {
+            type: 'doc',
+            id: 'graph-basics/widen-knowledge/overview'
+          },
+          items: [
+            'graph-basics/widen-knowledge/tag-edgetype-rank-vid',
+            'graph-basics/widen-knowledge/dangling-edge',
+            'graph-basics/widen-knowledge/path-type',
+            'graph-basics/widen-knowledge/selfloop',
+
+          ],
+        },
       ],
     },
+    'practice-cloud-deployment',
   ],
   
   };
