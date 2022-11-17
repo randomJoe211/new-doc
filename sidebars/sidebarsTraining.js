@@ -60,6 +60,7 @@
         'nebulagraph-intro/nebulagraph-features',
       ],
     },
+    'practice-nebulagraph-app',
   ],
   
   };
