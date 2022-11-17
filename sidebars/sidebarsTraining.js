@@ -47,6 +47,19 @@
       ],
     },
     'practice-cloud-deployment',
+    {
+      type: 'category',
+      label: 'NebulaGraph 简介',
+      link:  {
+        type: 'doc',
+        id: 'nebulagraph-intro/overview'
+      },
+      items: [
+        'nebulagraph-intro/nebulagraph-concept',
+        'nebulagraph-intro/nebulagraph-architecture',
+        'nebulagraph-intro/nebulagraph-features',
+      ],
+    },
     'practice-nebulagraph-app',
   ],
   
